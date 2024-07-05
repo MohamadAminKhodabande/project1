@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .card {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin: 0 10px;
+            overflow: hidden;
+            background-color: #002244;
+            transition: transform 0.3s ease;
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card:hover img {
+            transform: translateY(-30px);
+        }
+        .card .info {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            background-color: #004488;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            transition: bottom 0.3s ease;
+        }
+        .card:hover .info {
+            bottom: 0;
+        }
+        .icon {
+            font-size: 40px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="icon">✉️</div>
+            <div class="info">ایمیل</div>
+        </div>
+        <div class="card">
+            <div class="icon">📱</div>
+            <div class="info">تلفن</div>
+        </div>
+        <div class="card">
+            <div class="icon">📍</div>
+            <div class="info">مشهد، ایران</div>
+        </div>
+    </div>
+</body>
+</html>
